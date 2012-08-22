@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
 
 
   %w['dm-core dm-types php-serialize_ryan'].each do |gemname|
-    gem.add_dependency(gemane)
+    gem.add_dependency(gemname)
   end
 end
