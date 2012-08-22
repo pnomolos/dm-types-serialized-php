@@ -13,7 +13,10 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "dm-types-serialized-php"
   gem.require_paths = ["lib"]
-  gem.version       = Dm::Types::Serialized::Php::VERSION
+  gem.version       = DataMapper::Types::SerializedPhp::VERSION
 
-  gem.add_dependency('php-serialize_ryan')
+
+  %w['dm-core dm-types php-serialize_ryan'].each do |gemname|
+    gem.add_dependency(gemane)
+  end
 end
