@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = DataMapper::Property::SerializedPhp::VERSION
 
 
-  %w['dm-core dm-types php-serialize_ryan'].each do |gemname|
+  %w[dm-core dm-types php-serialize_ryan].each do |gemname|
     gem.add_dependency(gemname)
   end
 end
