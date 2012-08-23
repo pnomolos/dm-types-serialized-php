@@ -1,2 +1,8 @@
+require 'dm-core'
 require 'dm-types-serialized-php/version'
-require 'dm-types-serialized-php/serialized-php.rb'
+
+module DataMapper
+  class Property
+    autoload :SerializedPhp, 'dm-types-serialized-php/serialized-php.rb'
+  end
+end
