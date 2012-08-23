@@ -4,8 +4,8 @@ require File.expand_path('../lib/dm-types-serialized-php/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Phil"]
   gem.email         = ["pnomolos@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Provides supports for a field stored as a serialized PHP string}
+  gem.summary       = %q{Provides supports for a field stored as a serialized PHP string}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
