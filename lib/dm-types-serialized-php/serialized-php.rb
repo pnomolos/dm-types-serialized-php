@@ -1,17 +1,16 @@
 require 'dm-core'
 require 'dm-types/support/dirty_minder'
-require 'serialized-php_ryan'
+require 'php_serialize'
 
 module DataMapper
   class Property
     class SerializedPhp < Text
-
       def custom?
         true
       end
 
       def primitive?(value)
-        !::Php.serialized?(value)
+        !::PHP.serialized?(value)
       end
 
       def valid?(value, negated = false)
@@ -32,16 +31,16 @@ module DataMapper
         if value.nil? || (value.is_a?(::String) && !::Php.serialized?(value))
           value
         else
-          ::Php.serialize(value)
+          ::PHP.serialize(value)
         end
       end
 
       def typecast_to_primitive(value)
-        ::Php.unserialize(value.to_s)
+        ::PHP.unserialize(value.to_s)
       end
 
       include ::DataMapper::Property::DirtyMinder
 
-    end # class Json
-  end
-end
+    end # class SerializedPhp
+  end # class Property
+end # module DataMapper
