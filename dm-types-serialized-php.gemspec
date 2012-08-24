@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/dm-types-serialized-php/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ["Phil"]
   gem.email         = ["pnomolos@gmail.com"]
@@ -13,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "dm-types-serialized-php"
   gem.require_paths = ["lib"]
-  gem.version       = DataMapper::Property::SerializedPhp::VERSION
+  gem.version       = '0.0.1'
 
 
   %w[dm-core dm-types php-serialize_ryan].each do |gemname|
